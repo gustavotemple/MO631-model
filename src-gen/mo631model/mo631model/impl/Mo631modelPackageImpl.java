@@ -167,16 +167,6 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EReference getProducer_Exchange() {
-		return (EReference) producerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getMessage() {
 		return messageEClass;
 	}
@@ -237,16 +227,6 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EReference getQueue_Exchange() {
-		return (EReference) queueEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getBinding() {
 		return bindingEClass;
 	}
@@ -259,6 +239,16 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	@Override
 	public EAttribute getBinding_RoutingKey() {
 		return (EAttribute) bindingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBinding_Exchange() {
+		return (EReference) bindingEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -334,7 +324,6 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		producerEClass = createEClass(PRODUCER);
 		createEReference(producerEClass, PRODUCER__MESSAGE);
 		createEReference(producerEClass, PRODUCER__BINDING);
-		createEReference(producerEClass, PRODUCER__EXCHANGE);
 
 		messageEClass = createEClass(MESSAGE);
 		createEAttribute(messageEClass, MESSAGE__PAYLOAD);
@@ -343,10 +332,10 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		createEAttribute(queueEClass, QUEUE__NAME);
 		createEReference(queueEClass, QUEUE__MESSAGE);
 		createEReference(queueEClass, QUEUE__BINDING);
-		createEReference(queueEClass, QUEUE__EXCHANGE);
 
 		bindingEClass = createEClass(BINDING);
 		createEAttribute(bindingEClass, BINDING__ROUTING_KEY);
+		createEReference(bindingEClass, BINDING__EXCHANGE);
 
 		consumerEClass = createEClass(CONSUMER);
 		createEReference(consumerEClass, CONSUMER__QUEUE);
@@ -394,9 +383,6 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		initEReference(getProducer_Binding(), this.getBinding(), null, "binding", null, 1, 1, Producer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProducer_Exchange(), this.getExchange(), null, "exchange", null, 1, 1, Producer.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMessage_Payload(), ecorePackage.getEString(), "payload", null, 1, 1, Message.class,
@@ -411,13 +397,13 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		initEReference(getQueue_Binding(), this.getBinding(), null, "binding", null, 1, -1, Queue.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getQueue_Exchange(), this.getExchange(), null, "exchange", null, 1, -1, Queue.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bindingEClass, Binding.class, "Binding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBinding_RoutingKey(), ecorePackage.getEString(), "routingKey", null, 1, 1, Binding.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinding_Exchange(), this.getExchange(), null, "exchange", null, 1, 1, Binding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(consumerEClass, Consumer.class, "Consumer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

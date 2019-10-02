@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mo631model.mo631model.Queue#getName <em>Name</em>}</li>
  *   <li>{@link mo631model.mo631model.Queue#getMessage <em>Message</em>}</li>
  *   <li>{@link mo631model.mo631model.Queue#getBinding <em>Binding</em>}</li>
- *   <li>{@link mo631model.mo631model.Queue#getExchange <em>Exchange</em>}</li>
  * </ul>
  *
  * @see mo631model.mo631model.Mo631modelPackage#getQueue()
@@ -71,17 +70,5 @@ public interface Queue extends EObject {
 	 * @generated
 	 */
 	EList<Binding> getBinding();
-
-	/**
-	 * Returns the value of the '<em><b>Exchange</b></em>' containment reference list.
-	 * The list contents are of type {@link mo631model.mo631model.Exchange}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exchange</em>' containment reference list.
-	 * @see mo631model.mo631model.Mo631modelPackage#getQueue_Exchange()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<Exchange> getExchange();
 
 } // Queue

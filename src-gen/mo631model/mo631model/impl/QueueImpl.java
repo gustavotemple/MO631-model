@@ -5,7 +5,6 @@ package mo631model.mo631model.impl;
 import java.util.Collection;
 
 import mo631model.mo631model.Binding;
-import mo631model.mo631model.Exchange;
 import mo631model.mo631model.Message;
 import mo631model.mo631model.Mo631modelPackage;
 import mo631model.mo631model.Queue;
@@ -35,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mo631model.mo631model.impl.QueueImpl#getName <em>Name</em>}</li>
  *   <li>{@link mo631model.mo631model.impl.QueueImpl#getMessage <em>Message</em>}</li>
  *   <li>{@link mo631model.mo631model.impl.QueueImpl#getBinding <em>Binding</em>}</li>
- *   <li>{@link mo631model.mo631model.impl.QueueImpl#getExchange <em>Exchange</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,16 +78,6 @@ public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 	 * @ordered
 	 */
 	protected EList<Binding> binding;
-
-	/**
-	 * The cached value of the '{@link #getExchange() <em>Exchange</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExchange()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Exchange> exchange;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,27 +153,12 @@ public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 	 * @generated
 	 */
 	@Override
-	public EList<Exchange> getExchange() {
-		if (exchange == null) {
-			exchange = new EObjectContainmentEList<Exchange>(Exchange.class, this, Mo631modelPackage.QUEUE__EXCHANGE);
-		}
-		return exchange;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Mo631modelPackage.QUEUE__MESSAGE:
 			return ((InternalEList<?>) getMessage()).basicRemove(otherEnd, msgs);
 		case Mo631modelPackage.QUEUE__BINDING:
 			return ((InternalEList<?>) getBinding()).basicRemove(otherEnd, msgs);
-		case Mo631modelPackage.QUEUE__EXCHANGE:
-			return ((InternalEList<?>) getExchange()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -204,8 +177,6 @@ public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 			return getMessage();
 		case Mo631modelPackage.QUEUE__BINDING:
 			return getBinding();
-		case Mo631modelPackage.QUEUE__EXCHANGE:
-			return getExchange();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -230,10 +201,6 @@ public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 			getBinding().clear();
 			getBinding().addAll((Collection<? extends Binding>) newValue);
 			return;
-		case Mo631modelPackage.QUEUE__EXCHANGE:
-			getExchange().clear();
-			getExchange().addAll((Collection<? extends Exchange>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -255,9 +222,6 @@ public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 		case Mo631modelPackage.QUEUE__BINDING:
 			getBinding().clear();
 			return;
-		case Mo631modelPackage.QUEUE__EXCHANGE:
-			getExchange().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -276,8 +240,6 @@ public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 			return message != null && !message.isEmpty();
 		case Mo631modelPackage.QUEUE__BINDING:
 			return binding != null && !binding.isEmpty();
-		case Mo631modelPackage.QUEUE__EXCHANGE:
-			return exchange != null && !exchange.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

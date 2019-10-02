@@ -13,7 +13,6 @@
     <genClasses ecoreClass="mo631model.ecore#//Producer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Producer/message"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Producer/binding"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Producer/exchange"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//Message">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Message/payload"/>
@@ -22,10 +21,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Queue/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Queue/message"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Queue/binding"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Queue/exchange"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//Binding">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Binding/routingKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Binding/exchange"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//Consumer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Consumer/queue"/>

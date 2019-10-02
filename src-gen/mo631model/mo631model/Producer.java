@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link mo631model.mo631model.Producer#getMessage <em>Message</em>}</li>
  *   <li>{@link mo631model.mo631model.Producer#getBinding <em>Binding</em>}</li>
- *   <li>{@link mo631model.mo631model.Producer#getExchange <em>Exchange</em>}</li>
  * </ul>
  *
  * @see mo631model.mo631model.Mo631modelPackage#getProducer()
@@ -58,27 +57,5 @@ public interface Producer extends EObject {
 	 * @generated
 	 */
 	void setBinding(Binding value);
-
-	/**
-	 * Returns the value of the '<em><b>Exchange</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exchange</em>' containment reference.
-	 * @see #setExchange(Exchange)
-	 * @see mo631model.mo631model.Mo631modelPackage#getProducer_Exchange()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Exchange getExchange();
-
-	/**
-	 * Sets the value of the '{@link mo631model.mo631model.Producer#getExchange <em>Exchange</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exchange</em>' containment reference.
-	 * @see #getExchange()
-	 * @generated
-	 */
-	void setExchange(Exchange value);
 
 } // Producer

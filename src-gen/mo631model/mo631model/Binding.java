@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link mo631model.mo631model.Binding#getRoutingKey <em>Routing Key</em>}</li>
+ *   <li>{@link mo631model.mo631model.Binding#getExchange <em>Exchange</em>}</li>
  * </ul>
  *
  * @see mo631model.mo631model.Mo631modelPackage#getBinding()
@@ -42,5 +43,27 @@ public interface Binding extends EObject {
 	 * @generated
 	 */
 	void setRoutingKey(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Exchange</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exchange</em>' containment reference.
+	 * @see #setExchange(Exchange)
+	 * @see mo631model.mo631model.Mo631modelPackage#getBinding_Exchange()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Exchange getExchange();
+
+	/**
+	 * Sets the value of the '{@link mo631model.mo631model.Binding#getExchange <em>Exchange</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exchange</em>' containment reference.
+	 * @see #getExchange()
+	 * @generated
+	 */
+	void setExchange(Exchange value);
 
 } // Binding

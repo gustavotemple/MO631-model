@@ -85,22 +85,13 @@ public interface Mo631modelPackage extends EPackage {
 	int PRODUCER__BINDING = 1;
 
 	/**
-	 * The feature id for the '<em><b>Exchange</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCER__EXCHANGE = 2;
-
-	/**
 	 * The number of structural features of the '<em>Producer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCER_FEATURE_COUNT = 3;
+	int PRODUCER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Producer</em>' class.
@@ -186,22 +177,13 @@ public interface Mo631modelPackage extends EPackage {
 	int QUEUE__BINDING = 2;
 
 	/**
-	 * The feature id for the '<em><b>Exchange</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUEUE__EXCHANGE = 3;
-
-	/**
 	 * The number of structural features of the '<em>Queue</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUEUE_FEATURE_COUNT = 4;
+	int QUEUE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Queue</em>' class.
@@ -232,13 +214,22 @@ public interface Mo631modelPackage extends EPackage {
 	int BINDING__ROUTING_KEY = 0;
 
 	/**
+	 * The feature id for the '<em><b>Exchange</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDING__EXCHANGE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Binding</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BINDING_FEATURE_COUNT = 1;
+	int BINDING_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Binding</em>' class.
@@ -356,17 +347,6 @@ public interface Mo631modelPackage extends EPackage {
 	EReference getProducer_Binding();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.Producer#getExchange <em>Exchange</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Exchange</em>'.
-	 * @see mo631model.mo631model.Producer#getExchange()
-	 * @see #getProducer()
-	 * @generated
-	 */
-	EReference getProducer_Exchange();
-
-	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Message <em>Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -431,17 +411,6 @@ public interface Mo631modelPackage extends EPackage {
 	EReference getQueue_Binding();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.Queue#getExchange <em>Exchange</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Exchange</em>'.
-	 * @see mo631model.mo631model.Queue#getExchange()
-	 * @see #getQueue()
-	 * @generated
-	 */
-	EReference getQueue_Exchange();
-
-	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Binding <em>Binding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -461,6 +430,17 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBinding_RoutingKey();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.Binding#getExchange <em>Exchange</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exchange</em>'.
+	 * @see mo631model.mo631model.Binding#getExchange()
+	 * @see #getBinding()
+	 * @generated
+	 */
+	EReference getBinding_Exchange();
 
 	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Consumer <em>Consumer</em>}'.
@@ -554,14 +534,6 @@ public interface Mo631modelPackage extends EPackage {
 		EReference PRODUCER__BINDING = eINSTANCE.getProducer_Binding();
 
 		/**
-		 * The meta object literal for the '<em><b>Exchange</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCER__EXCHANGE = eINSTANCE.getProducer_Exchange();
-
-		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.MessageImpl <em>Message</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -614,14 +586,6 @@ public interface Mo631modelPackage extends EPackage {
 		EReference QUEUE__BINDING = eINSTANCE.getQueue_Binding();
 
 		/**
-		 * The meta object literal for the '<em><b>Exchange</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUEUE__EXCHANGE = eINSTANCE.getQueue_Exchange();
-
-		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.BindingImpl <em>Binding</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -638,6 +602,14 @@ public interface Mo631modelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BINDING__ROUTING_KEY = eINSTANCE.getBinding_RoutingKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Exchange</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINDING__EXCHANGE = eINSTANCE.getBinding_Exchange();
 
 		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.ConsumerImpl <em>Consumer</em>}' class.

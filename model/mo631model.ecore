@@ -6,8 +6,6 @@
         eType="#//Message" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="binding" lowerBound="1"
         eType="#//Binding" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exchange" lowerBound="1"
-        eType="#//Exchange" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Message">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="payload" lowerBound="1"
@@ -19,12 +17,12 @@
         eType="#//Message" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="binding" lowerBound="1"
         upperBound="-1" eType="#//Binding" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exchange" lowerBound="1"
-        upperBound="-1" eType="#//Exchange" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Binding">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="routingKey" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exchange" lowerBound="1"
+        eType="#//Exchange" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Consumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="queue" lowerBound="1" upperBound="-1"
