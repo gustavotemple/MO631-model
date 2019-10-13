@@ -12,15 +12,16 @@ import mo631model.mo631model.Mo631modelPackage;
 import mo631model.mo631model.Producer;
 import mo631model.mo631model.ProducersApp;
 import mo631model.mo631model.Queue;
-
 import mo631model.mo631model.ServerSettings;
+
 import mo631model.mo631model.util.Mo631modelValidator;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -654,7 +655,7 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation(consumerEClass, source, new String[] { "QueueDuplicated",
-				"Tuple {\n\tmessage : String = \'Queue duplicated\',\n\tstatus : Boolean = \t\t\n\t\tlet nameBagSize : Integer = queue->collect(name)->asBag()->size() in\n\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n\t\t\n\t\tif queue->isEmpty() then true\n\t\telse\n\t\t  nameBagSize = nameSetSize\n\t\tendif\n}.status" });
+				"Tuple {\n\tmessage : String = \'Queue duplicated\',\n\tstatus : Boolean = \t\t\n\t\tlet nameBagSize : Integer = queue->collect(name)->asBag()->size() in\n\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n\n\t\tif queue->isEmpty() then true\n\t\telse\n\t\t  nameBagSize = nameSetSize\n\t\tendif\n}.status" });
 		addAnnotation(serverSettingsEClass, source, new String[] { "InvalidPortNumber",
 				"Tuple {\n\tmessage : String = \'Invalid port number\',\n\tstatus : Boolean = port >= 1 and port <= 65535\n}.status" });
 	}

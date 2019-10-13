@@ -183,7 +183,7 @@ public class Mo631modelValidator extends EObjectValidator {
 	protected static final String CONSUMER__QUEUE_DUPLICATED__EEXPRESSION = "Tuple {\n"
 			+ "\tmessage : String = 'Queue duplicated',\n" + "\tstatus : Boolean = \t\t\n"
 			+ "\t\tlet nameBagSize : Integer = queue->collect(name)->asBag()->size() in\n"
-			+ "\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n" + "\t\t\n"
+			+ "\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n" + "\n"
 			+ "\t\tif queue->isEmpty() then true\n" + "\t\telse\n" + "\t\t  nameBagSize = nameSetSize\n" + "\t\tendif\n"
 			+ "}.status";
 
