@@ -97,6 +97,21 @@ public class Mo631modelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseProducersApp(ProducersApp object) {
+			return createProducersAppAdapter();
+		}
+
+		@Override
+		public Adapter caseServerSettings(ServerSettings object) {
+			return createServerSettingsAdapter();
+		}
+
+		@Override
+		public Adapter caseConsumersApp(ConsumersApp object) {
+			return createConsumersAppAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -196,6 +211,48 @@ public class Mo631modelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExchangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ProducersApp <em>Producers App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mo631model.mo631model.ProducersApp
+	 * @generated
+	 */
+	public Adapter createProducersAppAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ServerSettings <em>Server Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mo631model.mo631model.ServerSettings
+	 * @generated
+	 */
+	public Adapter createServerSettingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ConsumersApp <em>Consumers App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mo631model.mo631model.ConsumersApp
+	 * @generated
+	 */
+	public Adapter createConsumersAppAdapter() {
 		return null;
 	}
 

@@ -76,6 +76,33 @@ public interface Mo631modelFactory extends EFactory {
 	Exchange createExchange();
 
 	/**
+	 * Returns a new object of class '<em>Producers App</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Producers App</em>'.
+	 * @generated
+	 */
+	ProducersApp createProducersApp();
+
+	/**
+	 * Returns a new object of class '<em>Server Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Server Settings</em>'.
+	 * @generated
+	 */
+	ServerSettings createServerSettings();
+
+	/**
+	 * Returns a new object of class '<em>Consumers App</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Consumers App</em>'.
+	 * @generated
+	 */
+	ConsumersApp createConsumersApp();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

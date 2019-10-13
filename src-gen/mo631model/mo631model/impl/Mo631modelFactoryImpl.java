@@ -68,6 +68,12 @@ public class Mo631modelFactoryImpl extends EFactoryImpl implements Mo631modelFac
 			return createConsumer();
 		case Mo631modelPackage.EXCHANGE:
 			return createExchange();
+		case Mo631modelPackage.PRODUCERS_APP:
+			return createProducersApp();
+		case Mo631modelPackage.SERVER_SETTINGS:
+			return createServerSettings();
+		case Mo631modelPackage.CONSUMERS_APP:
+			return createConsumersApp();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -137,6 +143,39 @@ public class Mo631modelFactoryImpl extends EFactoryImpl implements Mo631modelFac
 	public Exchange createExchange() {
 		ExchangeImpl exchange = new ExchangeImpl();
 		return exchange;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ProducersApp createProducersApp() {
+		ProducersAppImpl producersApp = new ProducersAppImpl();
+		return producersApp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ServerSettings createServerSettings() {
+		ServerSettingsImpl serverSettings = new ServerSettingsImpl();
+		return serverSettings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ConsumersApp createConsumersApp() {
+		ConsumersAppImpl consumersApp = new ConsumersAppImpl();
+		return consumersApp;
 	}
 
 	/**

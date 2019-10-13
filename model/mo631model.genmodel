@@ -32,5 +32,19 @@
     <genClasses ecoreClass="mo631model.ecore#//Exchange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Exchange/name"/>
     </genClasses>
+    <genClasses ecoreClass="mo631model.ecore#//ProducersApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ProducersApp/producer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ProducersApp/serversettings"/>
+    </genClasses>
+    <genClasses ecoreClass="mo631model.ecore#//ServerSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/host"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/username"/>
+    </genClasses>
+    <genClasses ecoreClass="mo631model.ecore#//ConsumersApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ConsumersApp/consumer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ConsumersApp/serversettings"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

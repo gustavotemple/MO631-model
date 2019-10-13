@@ -108,6 +108,27 @@ public class Mo631modelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Mo631modelPackage.PRODUCERS_APP: {
+			ProducersApp producersApp = (ProducersApp) theEObject;
+			T result = caseProducersApp(producersApp);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Mo631modelPackage.SERVER_SETTINGS: {
+			ServerSettings serverSettings = (ServerSettings) theEObject;
+			T result = caseServerSettings(serverSettings);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Mo631modelPackage.CONSUMERS_APP: {
+			ConsumersApp consumersApp = (ConsumersApp) theEObject;
+			T result = caseConsumersApp(consumersApp);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -200,6 +221,51 @@ public class Mo631modelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExchange(Exchange object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Producers App</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Producers App</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProducersApp(ProducersApp object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Server Settings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Server Settings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseServerSettings(ServerSettings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Consumers App</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Consumers App</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConsumersApp(ConsumersApp object) {
 		return null;
 	}
 

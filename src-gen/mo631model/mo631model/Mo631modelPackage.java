@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see mo631model.mo631model.Mo631modelFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface Mo631modelPackage extends EPackage {
@@ -315,6 +317,162 @@ public interface Mo631modelPackage extends EPackage {
 	int EXCHANGE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link mo631model.mo631model.impl.ProducersAppImpl <em>Producers App</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mo631model.mo631model.impl.ProducersAppImpl
+	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getProducersApp()
+	 * @generated
+	 */
+	int PRODUCERS_APP = 6;
+
+	/**
+	 * The feature id for the '<em><b>Producer</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCERS_APP__PRODUCER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Serversettings</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCERS_APP__SERVERSETTINGS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Producers App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCERS_APP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Producers App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCERS_APP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link mo631model.mo631model.impl.ServerSettingsImpl <em>Server Settings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mo631model.mo631model.impl.ServerSettingsImpl
+	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getServerSettings()
+	 * @generated
+	 */
+	int SERVER_SETTINGS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER_SETTINGS__HOST = 0;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER_SETTINGS__PORT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER_SETTINGS__PASSWORD = 2;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER_SETTINGS__USERNAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Server Settings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER_SETTINGS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Server Settings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER_SETTINGS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link mo631model.mo631model.impl.ConsumersAppImpl <em>Consumers App</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mo631model.mo631model.impl.ConsumersAppImpl
+	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getConsumersApp()
+	 * @generated
+	 */
+	int CONSUMERS_APP = 8;
+
+	/**
+	 * The feature id for the '<em><b>Consumer</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMERS_APP__CONSUMER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Serversettings</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMERS_APP__SERVERSETTINGS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Consumers App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMERS_APP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Consumers App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMERS_APP_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Producer <em>Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -485,6 +643,124 @@ public interface Mo631modelPackage extends EPackage {
 	EAttribute getExchange_Name();
 
 	/**
+	 * Returns the meta object for class '{@link mo631model.mo631model.ProducersApp <em>Producers App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Producers App</em>'.
+	 * @see mo631model.mo631model.ProducersApp
+	 * @generated
+	 */
+	EClass getProducersApp();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.ProducersApp#getProducer <em>Producer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Producer</em>'.
+	 * @see mo631model.mo631model.ProducersApp#getProducer()
+	 * @see #getProducersApp()
+	 * @generated
+	 */
+	EReference getProducersApp_Producer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.ProducersApp#getServersettings <em>Serversettings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Serversettings</em>'.
+	 * @see mo631model.mo631model.ProducersApp#getServersettings()
+	 * @see #getProducersApp()
+	 * @generated
+	 */
+	EReference getProducersApp_Serversettings();
+
+	/**
+	 * Returns the meta object for class '{@link mo631model.mo631model.ServerSettings <em>Server Settings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Server Settings</em>'.
+	 * @see mo631model.mo631model.ServerSettings
+	 * @generated
+	 */
+	EClass getServerSettings();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getHost <em>Host</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Host</em>'.
+	 * @see mo631model.mo631model.ServerSettings#getHost()
+	 * @see #getServerSettings()
+	 * @generated
+	 */
+	EAttribute getServerSettings_Host();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getPort <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Port</em>'.
+	 * @see mo631model.mo631model.ServerSettings#getPort()
+	 * @see #getServerSettings()
+	 * @generated
+	 */
+	EAttribute getServerSettings_Port();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see mo631model.mo631model.ServerSettings#getPassword()
+	 * @see #getServerSettings()
+	 * @generated
+	 */
+	EAttribute getServerSettings_Password();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getUsername <em>Username</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Username</em>'.
+	 * @see mo631model.mo631model.ServerSettings#getUsername()
+	 * @see #getServerSettings()
+	 * @generated
+	 */
+	EAttribute getServerSettings_Username();
+
+	/**
+	 * Returns the meta object for class '{@link mo631model.mo631model.ConsumersApp <em>Consumers App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Consumers App</em>'.
+	 * @see mo631model.mo631model.ConsumersApp
+	 * @generated
+	 */
+	EClass getConsumersApp();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.ConsumersApp#getConsumer <em>Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Consumer</em>'.
+	 * @see mo631model.mo631model.ConsumersApp#getConsumer()
+	 * @see #getConsumersApp()
+	 * @generated
+	 */
+	EReference getConsumersApp_Consumer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.ConsumersApp#getServersettings <em>Serversettings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Serversettings</em>'.
+	 * @see mo631model.mo631model.ConsumersApp#getServersettings()
+	 * @see #getConsumersApp()
+	 * @generated
+	 */
+	EReference getConsumersApp_Serversettings();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -646,6 +922,100 @@ public interface Mo631modelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXCHANGE__NAME = eINSTANCE.getExchange_Name();
+
+		/**
+		 * The meta object literal for the '{@link mo631model.mo631model.impl.ProducersAppImpl <em>Producers App</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mo631model.mo631model.impl.ProducersAppImpl
+		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getProducersApp()
+		 * @generated
+		 */
+		EClass PRODUCERS_APP = eINSTANCE.getProducersApp();
+
+		/**
+		 * The meta object literal for the '<em><b>Producer</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCERS_APP__PRODUCER = eINSTANCE.getProducersApp_Producer();
+
+		/**
+		 * The meta object literal for the '<em><b>Serversettings</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCERS_APP__SERVERSETTINGS = eINSTANCE.getProducersApp_Serversettings();
+
+		/**
+		 * The meta object literal for the '{@link mo631model.mo631model.impl.ServerSettingsImpl <em>Server Settings</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mo631model.mo631model.impl.ServerSettingsImpl
+		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getServerSettings()
+		 * @generated
+		 */
+		EClass SERVER_SETTINGS = eINSTANCE.getServerSettings();
+
+		/**
+		 * The meta object literal for the '<em><b>Host</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVER_SETTINGS__HOST = eINSTANCE.getServerSettings_Host();
+
+		/**
+		 * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVER_SETTINGS__PORT = eINSTANCE.getServerSettings_Port();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVER_SETTINGS__PASSWORD = eINSTANCE.getServerSettings_Password();
+
+		/**
+		 * The meta object literal for the '<em><b>Username</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVER_SETTINGS__USERNAME = eINSTANCE.getServerSettings_Username();
+
+		/**
+		 * The meta object literal for the '{@link mo631model.mo631model.impl.ConsumersAppImpl <em>Consumers App</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mo631model.mo631model.impl.ConsumersAppImpl
+		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getConsumersApp()
+		 * @generated
+		 */
+		EClass CONSUMERS_APP = eINSTANCE.getConsumersApp();
+
+		/**
+		 * The meta object literal for the '<em><b>Consumer</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSUMERS_APP__CONSUMER = eINSTANCE.getConsumersApp_Consumer();
+
+		/**
+		 * The meta object literal for the '<em><b>Serversettings</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSUMERS_APP__SERVERSETTINGS = eINSTANCE.getConsumersApp_Serversettings();
 
 	}
 

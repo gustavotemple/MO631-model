@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mo631model" nsURI="http://www.example.org/mo631model" nsPrefix="mo631model">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Producer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="message" upperBound="-1"
         eType="#//Message" containment="true"/>
@@ -25,10 +33,44 @@
         eType="#//Exchange" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Consumer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="QueueDuplicated"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="QueueDuplicated" value="Tuple {&#xA;&#x9;message : String = 'Queue duplicated',&#xA;&#x9;status : Boolean = &#x9;&#x9;&#xA;&#x9;&#x9;let nameBagSize : Integer = queue->collect(name)->asBag()->size() in&#xA;&#x9;&#x9;let nameSetSize : Integer = queue->collect(name)->asSet()->size() in&#xA;&#xA;&#x9;&#x9;if queue->isEmpty() then true&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;  nameBagSize = nameSetSize&#xA;&#x9;&#x9;endif&#xA;}.status"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="queue" lowerBound="1" upperBound="-1"
         eType="#//Queue" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exchange">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProducersApp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="producer" lowerBound="1"
+        upperBound="-1" eType="#//Producer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serversettings" lowerBound="1"
+        eType="#//ServerSettings" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerSettings">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="InvalidPortNumber"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="InvalidPortNumber" value="Tuple {&#xA;&#x9;message : String = 'Invalid port number',&#xA;&#x9;status : Boolean = port >= 1 and port &lt;= 65535&#xA;}.status"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="host" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="localhost"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="5672"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="guest"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="guest"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumersApp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumer" lowerBound="1"
+        upperBound="-1" eType="#//Consumer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serversettings" lowerBound="1"
+        eType="#//ServerSettings" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
