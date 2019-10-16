@@ -4,15 +4,15 @@ package mo631model.mo631model.impl;
 
 import mo631model.mo631model.Binding;
 import mo631model.mo631model.Consumer;
-import mo631model.mo631model.ConsumersApp;
+import mo631model.mo631model.ConsumerRoot;
 import mo631model.mo631model.Exchange;
 import mo631model.mo631model.Message;
 import mo631model.mo631model.Mo631modelFactory;
 import mo631model.mo631model.Mo631modelPackage;
 import mo631model.mo631model.Producer;
-import mo631model.mo631model.ProducersApp;
+import mo631model.mo631model.ProducerRoot;
 import mo631model.mo631model.Queue;
-import mo631model.mo631model.ServerSettings;
+import mo631model.mo631model.Root;
 
 import mo631model.mo631model.util.Mo631modelValidator;
 
@@ -78,21 +78,21 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass producersAppEClass = null;
+	private EClass producerRootEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass serverSettingsEClass = null;
+	private EClass consumerRootEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass consumersAppEClass = null;
+	private EClass rootEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -332,8 +332,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EClass getProducersApp() {
-		return producersAppEClass;
+	public EClass getProducerRoot() {
+		return producerRootEClass;
 	}
 
 	/**
@@ -342,8 +342,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EReference getProducersApp_Producer() {
-		return (EReference) producersAppEClass.getEStructuralFeatures().get(0);
+	public EReference getProducerRoot_Producer() {
+		return (EReference) producerRootEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -352,8 +352,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EReference getProducersApp_Serversettings() {
-		return (EReference) producersAppEClass.getEStructuralFeatures().get(1);
+	public EClass getConsumerRoot() {
+		return consumerRootEClass;
 	}
 
 	/**
@@ -362,8 +362,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EClass getServerSettings() {
-		return serverSettingsEClass;
+	public EReference getConsumerRoot_Consumer() {
+		return (EReference) consumerRootEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -372,8 +372,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getServerSettings_Host() {
-		return (EAttribute) serverSettingsEClass.getEStructuralFeatures().get(0);
+	public EClass getRoot() {
+		return rootEClass;
 	}
 
 	/**
@@ -382,8 +382,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getServerSettings_Port() {
-		return (EAttribute) serverSettingsEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRoot_Host() {
+		return (EAttribute) rootEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -392,8 +392,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getServerSettings_Password() {
-		return (EAttribute) serverSettingsEClass.getEStructuralFeatures().get(2);
+	public EAttribute getRoot_Port() {
+		return (EAttribute) rootEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -402,8 +402,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getServerSettings_Username() {
-		return (EAttribute) serverSettingsEClass.getEStructuralFeatures().get(3);
+	public EAttribute getRoot_Password() {
+		return (EAttribute) rootEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -412,28 +412,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
-	public EClass getConsumersApp() {
-		return consumersAppEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getConsumersApp_Consumer() {
-		return (EReference) consumersAppEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getConsumersApp_Serversettings() {
-		return (EReference) consumersAppEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRoot_Username() {
+		return (EAttribute) rootEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -488,19 +468,17 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		exchangeEClass = createEClass(EXCHANGE);
 		createEAttribute(exchangeEClass, EXCHANGE__NAME);
 
-		producersAppEClass = createEClass(PRODUCERS_APP);
-		createEReference(producersAppEClass, PRODUCERS_APP__PRODUCER);
-		createEReference(producersAppEClass, PRODUCERS_APP__SERVERSETTINGS);
+		producerRootEClass = createEClass(PRODUCER_ROOT);
+		createEReference(producerRootEClass, PRODUCER_ROOT__PRODUCER);
 
-		serverSettingsEClass = createEClass(SERVER_SETTINGS);
-		createEAttribute(serverSettingsEClass, SERVER_SETTINGS__HOST);
-		createEAttribute(serverSettingsEClass, SERVER_SETTINGS__PORT);
-		createEAttribute(serverSettingsEClass, SERVER_SETTINGS__PASSWORD);
-		createEAttribute(serverSettingsEClass, SERVER_SETTINGS__USERNAME);
+		consumerRootEClass = createEClass(CONSUMER_ROOT);
+		createEReference(consumerRootEClass, CONSUMER_ROOT__CONSUMER);
 
-		consumersAppEClass = createEClass(CONSUMERS_APP);
-		createEReference(consumersAppEClass, CONSUMERS_APP__CONSUMER);
-		createEReference(consumersAppEClass, CONSUMERS_APP__SERVERSETTINGS);
+		rootEClass = createEClass(ROOT);
+		createEAttribute(rootEClass, ROOT__HOST);
+		createEAttribute(rootEClass, ROOT__PORT);
+		createEAttribute(rootEClass, ROOT__PASSWORD);
+		createEAttribute(rootEClass, ROOT__USERNAME);
 	}
 
 	/**
@@ -532,6 +510,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		producerRootEClass.getESuperTypes().add(this.getRoot());
+		consumerRootEClass.getESuperTypes().add(this.getRoot());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(producerEClass, Producer.class, "Producer", !IS_ABSTRACT, !IS_INTERFACE,
@@ -575,37 +555,27 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		initEAttribute(getExchange_Name(), ecorePackage.getEString(), "name", null, 1, 1, Exchange.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(producersAppEClass, ProducersApp.class, "ProducersApp", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(producerRootEClass, ProducerRoot.class, "ProducerRoot", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProducersApp_Producer(), this.getProducer(), null, "producer", null, 1, -1,
-				ProducersApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProducersApp_Serversettings(), this.getServerSettings(), null, "serversettings", null, 1, 1,
-				ProducersApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getProducerRoot_Producer(), this.getProducer(), null, "producer", null, 1, -1,
+				ProducerRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(serverSettingsEClass, ServerSettings.class, "ServerSettings", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(consumerRootEClass, ConsumerRoot.class, "ConsumerRoot", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getServerSettings_Host(), ecorePackage.getEString(), "host", "localhost", 1, 1,
-				ServerSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServerSettings_Port(), ecorePackage.getEInt(), "port", "5672", 1, 1, ServerSettings.class,
+		initEReference(getConsumerRoot_Consumer(), this.getConsumer(), null, "consumer", null, 1, -1,
+				ConsumerRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rootEClass, Root.class, "Root", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRoot_Host(), ecorePackage.getEString(), "host", "localhost", 1, 1, Root.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoot_Port(), ecorePackage.getEInt(), "port", "5672", 1, 1, Root.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoot_Password(), ecorePackage.getEString(), "password", "guest", 1, 1, Root.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServerSettings_Password(), ecorePackage.getEString(), "password", "guest", 1, 1,
-				ServerSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServerSettings_Username(), ecorePackage.getEString(), "username", "guest", 1, 1,
-				ServerSettings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
-		initEClass(consumersAppEClass, ConsumersApp.class, "ConsumersApp", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConsumersApp_Consumer(), this.getConsumer(), null, "consumer", null, 1, -1,
-				ConsumersApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConsumersApp_Serversettings(), this.getServerSettings(), null, "serversettings", null, 1, 1,
-				ConsumersApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoot_Username(), ecorePackage.getEString(), "username", "guest", 1, 1, Root.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -643,7 +613,7 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 						"settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "validationDelegates",
 						"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot" });
 		addAnnotation(consumerEClass, source, new String[] { "constraints", "QueueDuplicated" });
-		addAnnotation(serverSettingsEClass, source, new String[] { "constraints", "InvalidPortNumber" });
+		addAnnotation(rootEClass, source, new String[] { "constraints", "InvalidPortNumber" });
 	}
 
 	/**
@@ -655,8 +625,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation(consumerEClass, source, new String[] { "QueueDuplicated",
-				"Tuple {\n\tmessage : String = \'Queue duplicated\',\n\tstatus : Boolean = \t\t\n\t\tlet nameBagSize : Integer = queue->collect(name)->asBag()->size() in\n\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n\n\t\tif queue->isEmpty() then true\n\t\telse\n\t\t  nameBagSize = nameSetSize\n\t\tendif\n}.status" });
-		addAnnotation(serverSettingsEClass, source, new String[] { "InvalidPortNumber",
+				"Tuple {\n\tmessage : String = \'Queue duplicated\',\n\tstatus : Boolean = \n\t\tlet nameBagSize : Integer = queue->collect(name)->asBag()->size() in\n\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n\n\t\tif queue->isEmpty() then true\n\t\telse\n\t\t  nameBagSize = nameSetSize\n\t\tendif\n}.status" });
+		addAnnotation(rootEClass, source, new String[] { "InvalidPortNumber",
 				"Tuple {\n\tmessage : String = \'Invalid port number\',\n\tstatus : Boolean = port >= 1 and port <= 65535\n}.status" });
 	}
 

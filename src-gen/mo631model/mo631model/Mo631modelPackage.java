@@ -317,60 +317,14 @@ public interface Mo631modelPackage extends EPackage {
 	int EXCHANGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link mo631model.mo631model.impl.ProducersAppImpl <em>Producers App</em>}' class.
+	 * The meta object id for the '{@link mo631model.mo631model.impl.RootImpl <em>Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mo631model.mo631model.impl.ProducersAppImpl
-	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getProducersApp()
+	 * @see mo631model.mo631model.impl.RootImpl
+	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getRoot()
 	 * @generated
 	 */
-	int PRODUCERS_APP = 6;
-
-	/**
-	 * The feature id for the '<em><b>Producer</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCERS_APP__PRODUCER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Serversettings</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCERS_APP__SERVERSETTINGS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Producers App</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCERS_APP_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Producers App</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCERS_APP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link mo631model.mo631model.impl.ServerSettingsImpl <em>Server Settings</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mo631model.mo631model.impl.ServerSettingsImpl
-	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getServerSettings()
-	 * @generated
-	 */
-	int SERVER_SETTINGS = 7;
+	int ROOT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Host</b></em>' attribute.
@@ -379,7 +333,7 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_SETTINGS__HOST = 0;
+	int ROOT__HOST = 0;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -388,7 +342,7 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_SETTINGS__PORT = 1;
+	int ROOT__PORT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Password</b></em>' attribute.
@@ -397,7 +351,7 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_SETTINGS__PASSWORD = 2;
+	int ROOT__PASSWORD = 2;
 
 	/**
 	 * The feature id for the '<em><b>Username</b></em>' attribute.
@@ -406,35 +360,144 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_SETTINGS__USERNAME = 3;
+	int ROOT__USERNAME = 3;
 
 	/**
-	 * The number of structural features of the '<em>Server Settings</em>' class.
+	 * The number of structural features of the '<em>Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_SETTINGS_FEATURE_COUNT = 4;
+	int ROOT_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Server Settings</em>' class.
+	 * The number of operations of the '<em>Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_SETTINGS_OPERATION_COUNT = 0;
+	int ROOT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link mo631model.mo631model.impl.ConsumersAppImpl <em>Consumers App</em>}' class.
+	 * The meta object id for the '{@link mo631model.mo631model.impl.ProducerRootImpl <em>Producer Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mo631model.mo631model.impl.ConsumersAppImpl
-	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getConsumersApp()
+	 * @see mo631model.mo631model.impl.ProducerRootImpl
+	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getProducerRoot()
 	 * @generated
 	 */
-	int CONSUMERS_APP = 8;
+	int PRODUCER_ROOT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT__HOST = ROOT__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT__PORT = ROOT__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT__PASSWORD = ROOT__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT__USERNAME = ROOT__USERNAME;
+
+	/**
+	 * The feature id for the '<em><b>Producer</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT__PRODUCER = ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Producer Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT_FEATURE_COUNT = ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Producer Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT_OPERATION_COUNT = ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link mo631model.mo631model.impl.ConsumerRootImpl <em>Consumer Root</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mo631model.mo631model.impl.ConsumerRootImpl
+	 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getConsumerRoot()
+	 * @generated
+	 */
+	int CONSUMER_ROOT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_ROOT__HOST = ROOT__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_ROOT__PORT = ROOT__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_ROOT__PASSWORD = ROOT__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_ROOT__USERNAME = ROOT__USERNAME;
 
 	/**
 	 * The feature id for the '<em><b>Consumer</b></em>' containment reference list.
@@ -443,34 +506,25 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSUMERS_APP__CONSUMER = 0;
+	int CONSUMER_ROOT__CONSUMER = ROOT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Serversettings</b></em>' containment reference.
+	 * The number of structural features of the '<em>Consumer Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSUMERS_APP__SERVERSETTINGS = 1;
+	int CONSUMER_ROOT_FEATURE_COUNT = ROOT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Consumers App</em>' class.
+	 * The number of operations of the '<em>Consumer Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSUMERS_APP_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Consumers App</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSUMERS_APP_OPERATION_COUNT = 0;
+	int CONSUMER_ROOT_OPERATION_COUNT = ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Producer <em>Producer</em>}'.
@@ -643,122 +697,100 @@ public interface Mo631modelPackage extends EPackage {
 	EAttribute getExchange_Name();
 
 	/**
-	 * Returns the meta object for class '{@link mo631model.mo631model.ProducersApp <em>Producers App</em>}'.
+	 * Returns the meta object for class '{@link mo631model.mo631model.ProducerRoot <em>Producer Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Producers App</em>'.
-	 * @see mo631model.mo631model.ProducersApp
+	 * @return the meta object for class '<em>Producer Root</em>'.
+	 * @see mo631model.mo631model.ProducerRoot
 	 * @generated
 	 */
-	EClass getProducersApp();
+	EClass getProducerRoot();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.ProducersApp#getProducer <em>Producer</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.ProducerRoot#getProducer <em>Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Producer</em>'.
-	 * @see mo631model.mo631model.ProducersApp#getProducer()
-	 * @see #getProducersApp()
+	 * @see mo631model.mo631model.ProducerRoot#getProducer()
+	 * @see #getProducerRoot()
 	 * @generated
 	 */
-	EReference getProducersApp_Producer();
+	EReference getProducerRoot_Producer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.ProducersApp#getServersettings <em>Serversettings</em>}'.
+	 * Returns the meta object for class '{@link mo631model.mo631model.ConsumerRoot <em>Consumer Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Serversettings</em>'.
-	 * @see mo631model.mo631model.ProducersApp#getServersettings()
-	 * @see #getProducersApp()
+	 * @return the meta object for class '<em>Consumer Root</em>'.
+	 * @see mo631model.mo631model.ConsumerRoot
 	 * @generated
 	 */
-	EReference getProducersApp_Serversettings();
+	EClass getConsumerRoot();
 
 	/**
-	 * Returns the meta object for class '{@link mo631model.mo631model.ServerSettings <em>Server Settings</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Server Settings</em>'.
-	 * @see mo631model.mo631model.ServerSettings
-	 * @generated
-	 */
-	EClass getServerSettings();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getHost <em>Host</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Host</em>'.
-	 * @see mo631model.mo631model.ServerSettings#getHost()
-	 * @see #getServerSettings()
-	 * @generated
-	 */
-	EAttribute getServerSettings_Host();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getPort <em>Port</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Port</em>'.
-	 * @see mo631model.mo631model.ServerSettings#getPort()
-	 * @see #getServerSettings()
-	 * @generated
-	 */
-	EAttribute getServerSettings_Port();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getPassword <em>Password</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Password</em>'.
-	 * @see mo631model.mo631model.ServerSettings#getPassword()
-	 * @see #getServerSettings()
-	 * @generated
-	 */
-	EAttribute getServerSettings_Password();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ServerSettings#getUsername <em>Username</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Username</em>'.
-	 * @see mo631model.mo631model.ServerSettings#getUsername()
-	 * @see #getServerSettings()
-	 * @generated
-	 */
-	EAttribute getServerSettings_Username();
-
-	/**
-	 * Returns the meta object for class '{@link mo631model.mo631model.ConsumersApp <em>Consumers App</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Consumers App</em>'.
-	 * @see mo631model.mo631model.ConsumersApp
-	 * @generated
-	 */
-	EClass getConsumersApp();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.ConsumersApp#getConsumer <em>Consumer</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.ConsumerRoot#getConsumer <em>Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Consumer</em>'.
-	 * @see mo631model.mo631model.ConsumersApp#getConsumer()
-	 * @see #getConsumersApp()
+	 * @see mo631model.mo631model.ConsumerRoot#getConsumer()
+	 * @see #getConsumerRoot()
 	 * @generated
 	 */
-	EReference getConsumersApp_Consumer();
+	EReference getConsumerRoot_Consumer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.ConsumersApp#getServersettings <em>Serversettings</em>}'.
+	 * Returns the meta object for class '{@link mo631model.mo631model.Root <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Serversettings</em>'.
-	 * @see mo631model.mo631model.ConsumersApp#getServersettings()
-	 * @see #getConsumersApp()
+	 * @return the meta object for class '<em>Root</em>'.
+	 * @see mo631model.mo631model.Root
 	 * @generated
 	 */
-	EReference getConsumersApp_Serversettings();
+	EClass getRoot();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.Root#getHost <em>Host</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Host</em>'.
+	 * @see mo631model.mo631model.Root#getHost()
+	 * @see #getRoot()
+	 * @generated
+	 */
+	EAttribute getRoot_Host();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.Root#getPort <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Port</em>'.
+	 * @see mo631model.mo631model.Root#getPort()
+	 * @see #getRoot()
+	 * @generated
+	 */
+	EAttribute getRoot_Port();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.Root#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see mo631model.mo631model.Root#getPassword()
+	 * @see #getRoot()
+	 * @generated
+	 */
+	EAttribute getRoot_Password();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.Root#getUsername <em>Username</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Username</em>'.
+	 * @see mo631model.mo631model.Root#getUsername()
+	 * @see #getRoot()
+	 * @generated
+	 */
+	EAttribute getRoot_Username();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -924,14 +956,14 @@ public interface Mo631modelPackage extends EPackage {
 		EAttribute EXCHANGE__NAME = eINSTANCE.getExchange_Name();
 
 		/**
-		 * The meta object literal for the '{@link mo631model.mo631model.impl.ProducersAppImpl <em>Producers App</em>}' class.
+		 * The meta object literal for the '{@link mo631model.mo631model.impl.ProducerRootImpl <em>Producer Root</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see mo631model.mo631model.impl.ProducersAppImpl
-		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getProducersApp()
+		 * @see mo631model.mo631model.impl.ProducerRootImpl
+		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getProducerRoot()
 		 * @generated
 		 */
-		EClass PRODUCERS_APP = eINSTANCE.getProducersApp();
+		EClass PRODUCER_ROOT = eINSTANCE.getProducerRoot();
 
 		/**
 		 * The meta object literal for the '<em><b>Producer</b></em>' containment reference list feature.
@@ -939,67 +971,17 @@ public interface Mo631modelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRODUCERS_APP__PRODUCER = eINSTANCE.getProducersApp_Producer();
+		EReference PRODUCER_ROOT__PRODUCER = eINSTANCE.getProducerRoot_Producer();
 
 		/**
-		 * The meta object literal for the '<em><b>Serversettings</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link mo631model.mo631model.impl.ConsumerRootImpl <em>Consumer Root</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see mo631model.mo631model.impl.ConsumerRootImpl
+		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getConsumerRoot()
 		 * @generated
 		 */
-		EReference PRODUCERS_APP__SERVERSETTINGS = eINSTANCE.getProducersApp_Serversettings();
-
-		/**
-		 * The meta object literal for the '{@link mo631model.mo631model.impl.ServerSettingsImpl <em>Server Settings</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mo631model.mo631model.impl.ServerSettingsImpl
-		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getServerSettings()
-		 * @generated
-		 */
-		EClass SERVER_SETTINGS = eINSTANCE.getServerSettings();
-
-		/**
-		 * The meta object literal for the '<em><b>Host</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVER_SETTINGS__HOST = eINSTANCE.getServerSettings_Host();
-
-		/**
-		 * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVER_SETTINGS__PORT = eINSTANCE.getServerSettings_Port();
-
-		/**
-		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVER_SETTINGS__PASSWORD = eINSTANCE.getServerSettings_Password();
-
-		/**
-		 * The meta object literal for the '<em><b>Username</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVER_SETTINGS__USERNAME = eINSTANCE.getServerSettings_Username();
-
-		/**
-		 * The meta object literal for the '{@link mo631model.mo631model.impl.ConsumersAppImpl <em>Consumers App</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mo631model.mo631model.impl.ConsumersAppImpl
-		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getConsumersApp()
-		 * @generated
-		 */
-		EClass CONSUMERS_APP = eINSTANCE.getConsumersApp();
+		EClass CONSUMER_ROOT = eINSTANCE.getConsumerRoot();
 
 		/**
 		 * The meta object literal for the '<em><b>Consumer</b></em>' containment reference list feature.
@@ -1007,15 +989,49 @@ public interface Mo631modelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONSUMERS_APP__CONSUMER = eINSTANCE.getConsumersApp_Consumer();
+		EReference CONSUMER_ROOT__CONSUMER = eINSTANCE.getConsumerRoot_Consumer();
 
 		/**
-		 * The meta object literal for the '<em><b>Serversettings</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link mo631model.mo631model.impl.RootImpl <em>Root</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mo631model.mo631model.impl.RootImpl
+		 * @see mo631model.mo631model.impl.Mo631modelPackageImpl#getRoot()
+		 * @generated
+		 */
+		EClass ROOT = eINSTANCE.getRoot();
+
+		/**
+		 * The meta object literal for the '<em><b>Host</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONSUMERS_APP__SERVERSETTINGS = eINSTANCE.getConsumersApp_Serversettings();
+		EAttribute ROOT__HOST = eINSTANCE.getRoot_Host();
+
+		/**
+		 * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOT__PORT = eINSTANCE.getRoot_Port();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOT__PASSWORD = eINSTANCE.getRoot_Password();
+
+		/**
+		 * The meta object literal for the '<em><b>Username</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOT__USERNAME = eINSTANCE.getRoot_Username();
 
 	}
 

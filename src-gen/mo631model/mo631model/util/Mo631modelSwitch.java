@@ -108,23 +108,27 @@ public class Mo631modelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Mo631modelPackage.PRODUCERS_APP: {
-			ProducersApp producersApp = (ProducersApp) theEObject;
-			T result = caseProducersApp(producersApp);
+		case Mo631modelPackage.PRODUCER_ROOT: {
+			ProducerRoot producerRoot = (ProducerRoot) theEObject;
+			T result = caseProducerRoot(producerRoot);
+			if (result == null)
+				result = caseRoot(producerRoot);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Mo631modelPackage.SERVER_SETTINGS: {
-			ServerSettings serverSettings = (ServerSettings) theEObject;
-			T result = caseServerSettings(serverSettings);
+		case Mo631modelPackage.CONSUMER_ROOT: {
+			ConsumerRoot consumerRoot = (ConsumerRoot) theEObject;
+			T result = caseConsumerRoot(consumerRoot);
+			if (result == null)
+				result = caseRoot(consumerRoot);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Mo631modelPackage.CONSUMERS_APP: {
-			ConsumersApp consumersApp = (ConsumersApp) theEObject;
-			T result = caseConsumersApp(consumersApp);
+		case Mo631modelPackage.ROOT: {
+			Root root = (Root) theEObject;
+			T result = caseRoot(root);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -225,47 +229,47 @@ public class Mo631modelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Producers App</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Producer Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Producers App</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Producer Root</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProducersApp(ProducersApp object) {
+	public T caseProducerRoot(ProducerRoot object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Server Settings</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Consumer Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Server Settings</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Consumer Root</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServerSettings(ServerSettings object) {
+	public T caseConsumerRoot(ConsumerRoot object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Consumers App</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Consumers App</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Root</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConsumersApp(ConsumersApp object) {
+	public T caseRoot(Root object) {
 		return null;
 	}
 

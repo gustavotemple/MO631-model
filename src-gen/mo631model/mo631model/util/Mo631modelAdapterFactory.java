@@ -97,18 +97,18 @@ public class Mo631modelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseProducersApp(ProducersApp object) {
-			return createProducersAppAdapter();
+		public Adapter caseProducerRoot(ProducerRoot object) {
+			return createProducerRootAdapter();
 		}
 
 		@Override
-		public Adapter caseServerSettings(ServerSettings object) {
-			return createServerSettingsAdapter();
+		public Adapter caseConsumerRoot(ConsumerRoot object) {
+			return createConsumerRootAdapter();
 		}
 
 		@Override
-		public Adapter caseConsumersApp(ConsumersApp object) {
-			return createConsumersAppAdapter();
+		public Adapter caseRoot(Root object) {
+			return createRootAdapter();
 		}
 
 		@Override
@@ -215,44 +215,44 @@ public class Mo631modelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ProducersApp <em>Producers App</em>}'.
+	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ProducerRoot <em>Producer Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mo631model.mo631model.ProducersApp
+	 * @see mo631model.mo631model.ProducerRoot
 	 * @generated
 	 */
-	public Adapter createProducersAppAdapter() {
+	public Adapter createProducerRootAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ServerSettings <em>Server Settings</em>}'.
+	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ConsumerRoot <em>Consumer Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mo631model.mo631model.ServerSettings
+	 * @see mo631model.mo631model.ConsumerRoot
 	 * @generated
 	 */
-	public Adapter createServerSettingsAdapter() {
+	public Adapter createConsumerRootAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.ConsumersApp <em>Consumers App</em>}'.
+	 * Creates a new adapter for an object of class '{@link mo631model.mo631model.Root <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mo631model.mo631model.ConsumersApp
+	 * @see mo631model.mo631model.Root
 	 * @generated
 	 */
-	public Adapter createConsumersAppAdapter() {
+	public Adapter createRootAdapter() {
 		return null;
 	}
 

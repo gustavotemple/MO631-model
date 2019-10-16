@@ -32,19 +32,17 @@
     <genClasses ecoreClass="mo631model.ecore#//Exchange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Exchange/name"/>
     </genClasses>
-    <genClasses ecoreClass="mo631model.ecore#//ProducersApp">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ProducersApp/producer"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ProducersApp/serversettings"/>
+    <genClasses ecoreClass="mo631model.ecore#//ProducerRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ProducerRoot/producer"/>
     </genClasses>
-    <genClasses ecoreClass="mo631model.ecore#//ServerSettings">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/host"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/port"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/password"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ServerSettings/username"/>
+    <genClasses ecoreClass="mo631model.ecore#//ConsumerRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ConsumerRoot/consumer"/>
     </genClasses>
-    <genClasses ecoreClass="mo631model.ecore#//ConsumersApp">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ConsumersApp/consumer"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ConsumersApp/serversettings"/>
+    <genClasses image="false" ecoreClass="mo631model.ecore#//Root">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Root/host"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Root/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Root/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Root/username"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

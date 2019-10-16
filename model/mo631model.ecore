@@ -37,7 +37,7 @@
       <details key="constraints" value="QueueDuplicated"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="QueueDuplicated" value="Tuple {&#xA;&#x9;message : String = 'Queue duplicated',&#xA;&#x9;status : Boolean = &#x9;&#x9;&#xA;&#x9;&#x9;let nameBagSize : Integer = queue->collect(name)->asBag()->size() in&#xA;&#x9;&#x9;let nameSetSize : Integer = queue->collect(name)->asSet()->size() in&#xA;&#xA;&#x9;&#x9;if queue->isEmpty() then true&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;  nameBagSize = nameSetSize&#xA;&#x9;&#x9;endif&#xA;}.status"/>
+      <details key="QueueDuplicated" value="Tuple {&#xA;&#x9;message : String = 'Queue duplicated',&#xA;&#x9;status : Boolean = &#xA;&#x9;&#x9;let nameBagSize : Integer = queue->collect(name)->asBag()->size() in&#xA;&#x9;&#x9;let nameSetSize : Integer = queue->collect(name)->asSet()->size() in&#xA;&#xA;&#x9;&#x9;if queue->isEmpty() then true&#xA;&#x9;&#x9;else&#xA;&#x9;&#x9;  nameBagSize = nameSetSize&#xA;&#x9;&#x9;endif&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="queue" lowerBound="1" upperBound="-1"
         eType="#//Queue" containment="true"/>
@@ -45,13 +45,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Exchange">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProducersApp">
+  <eClassifiers xsi:type="ecore:EClass" name="ProducerRoot" eSuperTypes="#//Root">
     <eStructuralFeatures xsi:type="ecore:EReference" name="producer" lowerBound="1"
         upperBound="-1" eType="#//Producer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serversettings" lowerBound="1"
-        eType="#//ServerSettings" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ServerSettings">
+  <eClassifiers xsi:type="ecore:EClass" name="ConsumerRoot" eSuperTypes="#//Root">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumer" lowerBound="1"
+        upperBound="-1" eType="#//Consumer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Root" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="InvalidPortNumber"/>
     </eAnnotations>
@@ -66,11 +68,5 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="guest"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="guest"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConsumersApp">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="consumer" lowerBound="1"
-        upperBound="-1" eType="#//Consumer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serversettings" lowerBound="1"
-        eType="#//ServerSettings" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

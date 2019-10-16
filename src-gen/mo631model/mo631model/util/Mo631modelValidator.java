@@ -99,12 +99,12 @@ public class Mo631modelValidator extends EObjectValidator {
 			return validateConsumer((Consumer) value, diagnostics, context);
 		case Mo631modelPackage.EXCHANGE:
 			return validateExchange((Exchange) value, diagnostics, context);
-		case Mo631modelPackage.PRODUCERS_APP:
-			return validateProducersApp((ProducersApp) value, diagnostics, context);
-		case Mo631modelPackage.SERVER_SETTINGS:
-			return validateServerSettings((ServerSettings) value, diagnostics, context);
-		case Mo631modelPackage.CONSUMERS_APP:
-			return validateConsumersApp((ConsumersApp) value, diagnostics, context);
+		case Mo631modelPackage.PRODUCER_ROOT:
+			return validateProducerRoot((ProducerRoot) value, diagnostics, context);
+		case Mo631modelPackage.CONSUMER_ROOT:
+			return validateConsumerRoot((ConsumerRoot) value, diagnostics, context);
+		case Mo631modelPackage.ROOT:
+			return validateRoot((Root) value, diagnostics, context);
 		default:
 			return true;
 		}
@@ -181,7 +181,7 @@ public class Mo631modelValidator extends EObjectValidator {
 	 * @generated
 	 */
 	protected static final String CONSUMER__QUEUE_DUPLICATED__EEXPRESSION = "Tuple {\n"
-			+ "\tmessage : String = 'Queue duplicated',\n" + "\tstatus : Boolean = \t\t\n"
+			+ "\tmessage : String = 'Queue duplicated',\n" + "\tstatus : Boolean = \n"
 			+ "\t\tlet nameBagSize : Integer = queue->collect(name)->asBag()->size() in\n"
 			+ "\t\tlet nameSetSize : Integer = queue->collect(name)->asSet()->size() in\n" + "\n"
 			+ "\t\tif queue->isEmpty() then true\n" + "\t\telse\n" + "\t\t  nameBagSize = nameSetSize\n" + "\t\tendif\n"
@@ -214,61 +214,57 @@ public class Mo631modelValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateProducersApp(ProducersApp producersApp, DiagnosticChain diagnostics,
+	public boolean validateProducerRoot(ProducerRoot producerRoot, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(producersApp, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateServerSettings(ServerSettings serverSettings, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(serverSettings, diagnostics, context))
+		if (!validate_NoCircularContainment(producerRoot, diagnostics, context))
 			return false;
-		boolean result = validate_EveryMultiplicityConforms(serverSettings, diagnostics, context);
+		boolean result = validate_EveryMultiplicityConforms(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryDataValueConforms(serverSettings, diagnostics, context);
+			result &= validate_EveryDataValueConforms(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryReferenceIsContained(serverSettings, diagnostics, context);
+			result &= validate_EveryReferenceIsContained(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryBidirectionalReferenceIsPaired(serverSettings, diagnostics, context);
+			result &= validate_EveryBidirectionalReferenceIsPaired(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryProxyResolves(serverSettings, diagnostics, context);
+			result &= validate_EveryProxyResolves(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_UniqueID(serverSettings, diagnostics, context);
+			result &= validate_UniqueID(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryKeyUnique(serverSettings, diagnostics, context);
+			result &= validate_EveryKeyUnique(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validate_EveryMapEntryUnique(serverSettings, diagnostics, context);
+			result &= validate_EveryMapEntryUnique(producerRoot, diagnostics, context);
 		if (result || diagnostics != null)
-			result &= validateServerSettings_InvalidPortNumber(serverSettings, diagnostics, context);
+			result &= validateRoot_InvalidPortNumber(producerRoot, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the InvalidPortNumber constraint of '<em>Server Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String SERVER_SETTINGS__INVALID_PORT_NUMBER__EEXPRESSION = "Tuple {\n"
-			+ "\tmessage : String = 'Invalid port number',\n" + "\tstatus : Boolean = port >= 1 and port <= 65535\n"
-			+ "}.status";
-
-	/**
-	 * Validates the InvalidPortNumber constraint of '<em>Server Settings</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateServerSettings_InvalidPortNumber(ServerSettings serverSettings, DiagnosticChain diagnostics,
+	public boolean validateConsumerRoot(ConsumerRoot consumerRoot, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
-		return validate(Mo631modelPackage.Literals.SERVER_SETTINGS, serverSettings, diagnostics, context,
-				"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "InvalidPortNumber",
-				SERVER_SETTINGS__INVALID_PORT_NUMBER__EEXPRESSION, Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0);
+		if (!validate_NoCircularContainment(consumerRoot, diagnostics, context))
+			return false;
+		boolean result = validate_EveryMultiplicityConforms(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryDataValueConforms(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryReferenceIsContained(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryBidirectionalReferenceIsPaired(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryProxyResolves(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_UniqueID(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryKeyUnique(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryMapEntryUnique(consumerRoot, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validateRoot_InvalidPortNumber(consumerRoot, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -276,9 +272,49 @@ public class Mo631modelValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateConsumersApp(ConsumersApp consumersApp, DiagnosticChain diagnostics,
-			Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(consumersApp, diagnostics, context);
+	public boolean validateRoot(Root root, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(root, diagnostics, context))
+			return false;
+		boolean result = validate_EveryMultiplicityConforms(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryDataValueConforms(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryReferenceIsContained(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryBidirectionalReferenceIsPaired(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryProxyResolves(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_UniqueID(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryKeyUnique(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validate_EveryMapEntryUnique(root, diagnostics, context);
+		if (result || diagnostics != null)
+			result &= validateRoot_InvalidPortNumber(root, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the InvalidPortNumber constraint of '<em>Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String ROOT__INVALID_PORT_NUMBER__EEXPRESSION = "Tuple {\n"
+			+ "\tmessage : String = 'Invalid port number',\n" + "\tstatus : Boolean = port >= 1 and port <= 65535\n"
+			+ "}.status";
+
+	/**
+	 * Validates the InvalidPortNumber constraint of '<em>Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRoot_InvalidPortNumber(Root root, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate(Mo631modelPackage.Literals.ROOT, root, diagnostics, context,
+				"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "InvalidPortNumber",
+				ROOT__INVALID_PORT_NUMBER__EEXPRESSION, Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0);
 	}
 
 	/**

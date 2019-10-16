@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see mo631model.mo631model.Mo631modelPackage#getConsumer()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='QueueDuplicated'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot QueueDuplicated='Tuple {\n\tmessage : String = \'Queue duplicated\',\n\tstatus : Boolean = \t\t\n\t\tlet nameBagSize : Integer = queue-&gt;collect(name)-&gt;asBag()-&gt;size() in\n\t\tlet nameSetSize : Integer = queue-&gt;collect(name)-&gt;asSet()-&gt;size() in\n\n\t\tif queue-&gt;isEmpty() then true\n\t\telse\n\t\t  nameBagSize = nameSetSize\n\t\tendif\n}.status'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot QueueDuplicated='Tuple {\n\tmessage : String = \'Queue duplicated\',\n\tstatus : Boolean = \n\t\tlet nameBagSize : Integer = queue-&gt;collect(name)-&gt;asBag()-&gt;size() in\n\t\tlet nameSetSize : Integer = queue-&gt;collect(name)-&gt;asSet()-&gt;size() in\n\n\t\tif queue-&gt;isEmpty() then true\n\t\telse\n\t\t  nameBagSize = nameSetSize\n\t\tendif\n}.status'"
  * @generated
  */
 public interface Consumer extends EObject {
