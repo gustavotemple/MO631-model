@@ -69,7 +69,7 @@ public interface Mo631modelPackage extends EPackage {
 	int PRODUCER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Message</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -537,10 +537,10 @@ public interface Mo631modelPackage extends EPackage {
 	EClass getProducer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mo631model.mo631model.Producer#getMessage <em>Message</em>}'.
+	 * Returns the meta object for the containment reference '{@link mo631model.mo631model.Producer#getMessage <em>Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Message</em>'.
+	 * @return the meta object for the containment reference '<em>Message</em>'.
 	 * @see mo631model.mo631model.Producer#getMessage()
 	 * @see #getProducer()
 	 * @generated
@@ -826,7 +826,7 @@ public interface Mo631modelPackage extends EPackage {
 		EClass PRODUCER = eINSTANCE.getProducer();
 
 		/**
-		 * The meta object literal for the '<em><b>Message</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Message</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

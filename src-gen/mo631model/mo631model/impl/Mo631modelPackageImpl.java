@@ -516,7 +516,7 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(producerEClass, Producer.class, "Producer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProducer_Message(), this.getMessage(), null, "message", null, 0, -1, Producer.class,
+		initEReference(getProducer_Message(), this.getMessage(), null, "message", null, 1, 1, Producer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProducer_Binding(), this.getBinding(), null, "binding", null, 1, 1, Producer.class,
