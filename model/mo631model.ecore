@@ -10,7 +10,7 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Producer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="message" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" lowerBound="1"
         eType="#//Message" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="binding" lowerBound="1"
         eType="#//Binding" containment="true"/>
