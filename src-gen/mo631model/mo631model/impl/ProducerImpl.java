@@ -2,6 +2,8 @@
  */
 package mo631model.mo631model.impl;
 
+import java.util.Collection;
+
 import mo631model.mo631model.Binding;
 import mo631model.mo631model.Message;
 import mo631model.mo631model.Mo631modelPackage;
@@ -10,11 +12,16 @@ import mo631model.mo631model.Producer;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,14 +39,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ProducerImpl extends MinimalEObjectImpl.Container implements Producer {
 	/**
-	 * The cached value of the '{@link #getMessage() <em>Message</em>}' containment reference.
+	 * The cached value of the '{@link #getMessage() <em>Message</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected Message message;
+	protected EList<Message> message;
 
 	/**
 	 * The cached value of the '{@link #getBinding() <em>Binding</em>}' containment reference.
@@ -76,50 +83,11 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	 * @generated
 	 */
 	@Override
-	public Message getMessage() {
-		return message;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetMessage(Message newMessage, NotificationChain msgs) {
-		Message oldMessage = message;
-		message = newMessage;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Mo631modelPackage.PRODUCER__MESSAGE, oldMessage, newMessage);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<Message> getMessage() {
+		if (message == null) {
+			message = new EObjectContainmentEList<Message>(Message.class, this, Mo631modelPackage.PRODUCER__MESSAGE);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setMessage(Message newMessage) {
-		if (newMessage != message) {
-			NotificationChain msgs = null;
-			if (message != null)
-				msgs = ((InternalEObject) message).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Mo631modelPackage.PRODUCER__MESSAGE, null, msgs);
-			if (newMessage != null)
-				msgs = ((InternalEObject) newMessage).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Mo631modelPackage.PRODUCER__MESSAGE, null, msgs);
-			msgs = basicSetMessage(newMessage, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Mo631modelPackage.PRODUCER__MESSAGE, newMessage,
-					newMessage));
+		return message;
 	}
 
 	/**
@@ -183,7 +151,7 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Mo631modelPackage.PRODUCER__MESSAGE:
-			return basicSetMessage(null, msgs);
+			return ((InternalEList<?>) getMessage()).basicRemove(otherEnd, msgs);
 		case Mo631modelPackage.PRODUCER__BINDING:
 			return basicSetBinding(null, msgs);
 		}
@@ -211,11 +179,13 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Mo631modelPackage.PRODUCER__MESSAGE:
-			setMessage((Message) newValue);
+			getMessage().clear();
+			getMessage().addAll((Collection<? extends Message>) newValue);
 			return;
 		case Mo631modelPackage.PRODUCER__BINDING:
 			setBinding((Binding) newValue);
@@ -233,7 +203,7 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Mo631modelPackage.PRODUCER__MESSAGE:
-			setMessage((Message) null);
+			getMessage().clear();
 			return;
 		case Mo631modelPackage.PRODUCER__BINDING:
 			setBinding((Binding) null);
@@ -251,7 +221,7 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Mo631modelPackage.PRODUCER__MESSAGE:
-			return message != null;
+			return message != null && !message.isEmpty();
 		case Mo631modelPackage.PRODUCER__BINDING:
 			return binding != null;
 		}

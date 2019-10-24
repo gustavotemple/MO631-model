@@ -2,6 +2,8 @@
  */
 package mo631model.mo631model;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,26 +25,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Producer extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Message</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Message</b></em>' containment reference list.
+	 * The list contents are of type {@link mo631model.mo631model.Message}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Message</em>' containment reference.
-	 * @see #setMessage(Message)
+	 * @return the value of the '<em>Message</em>' containment reference list.
 	 * @see mo631model.mo631model.Mo631modelPackage#getProducer_Message()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	Message getMessage();
-
-	/**
-	 * Sets the value of the '{@link mo631model.mo631model.Producer#getMessage <em>Message</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Message</em>' containment reference.
-	 * @see #getMessage()
-	 * @generated
-	 */
-	void setMessage(Message value);
+	EList<Message> getMessage();
 
 	/**
 	 * Returns the value of the '<em><b>Binding</b></em>' containment reference.

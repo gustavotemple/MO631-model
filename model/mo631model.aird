@@ -443,14 +443,12 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FhPW1t1NEem8sqa5l1TK6w" name="[1..1] message" sourceNode="_7JvpcN1KEemD6v-B4w1pdQ" targetNode="_MkwSUN1MEem8sqa5l1TK6w">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FhPW1t1NEem8sqa5l1TK6w" name="[0..*] message" sourceNode="_7JvpcN1KEemD6v-B4w1pdQ" targetNode="_MkwSUN1MEem8sqa5l1TK6w">
       <target xmi:type="ecore:EReference" href="mo631model.ecore#//Producer/message"/>
       <semanticElements xmi:type="ecore:EReference" href="mo631model.ecore#//Producer/message"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6iVu0PLNEemygJ_szoX3Xw" description="_CCQHcN1NEem8sqa5l1TK6w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6iVu0vLNEemygJ_szoX3Xw" showIcon="false">
-          <labelFormat>bold</labelFormat>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_6iVu0fLNEemygJ_szoX3Xw" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_VlMTEPXtEemSm57hBtD9Pg" description="_Eal30N1NEem8sqa5l1TK6w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_VlMTEvXtEemSm57hBtD9Pg" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_VlMTEfXtEemSm57hBtD9Pg" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
