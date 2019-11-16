@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link mo631model.mo631model.impl.ProducerImpl#getMessage <em>Message</em>}</li>
  *   <li>{@link mo631model.mo631model.impl.ProducerImpl#getBinding <em>Binding</em>}</li>
+ *   <li>{@link mo631model.mo631model.impl.ProducerImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +58,26 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	 * @ordered
 	 */
 	protected Binding binding;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,6 +169,29 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Mo631modelPackage.PRODUCER__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Mo631modelPackage.PRODUCER__MESSAGE:
@@ -170,6 +214,8 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 			return getMessage();
 		case Mo631modelPackage.PRODUCER__BINDING:
 			return getBinding();
+		case Mo631modelPackage.PRODUCER__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,6 +236,9 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 		case Mo631modelPackage.PRODUCER__BINDING:
 			setBinding((Binding) newValue);
 			return;
+		case Mo631modelPackage.PRODUCER__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -208,6 +257,9 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 		case Mo631modelPackage.PRODUCER__BINDING:
 			setBinding((Binding) null);
 			return;
+		case Mo631modelPackage.PRODUCER__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -224,8 +276,27 @@ public class ProducerImpl extends MinimalEObjectImpl.Container implements Produc
 			return message != null && !message.isEmpty();
 		case Mo631modelPackage.PRODUCER__BINDING:
 			return binding != null;
+		case Mo631modelPackage.PRODUCER__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ProducerImpl

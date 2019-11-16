@@ -87,13 +87,22 @@ public interface Mo631modelPackage extends EPackage {
 	int PRODUCER__BINDING = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Producer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCER_FEATURE_COUNT = 2;
+	int PRODUCER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Producer</em>' class.
@@ -262,13 +271,22 @@ public interface Mo631modelPackage extends EPackage {
 	int CONSUMER__QUEUE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Consumer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSUMER_FEATURE_COUNT = 1;
+	int CONSUMER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Consumer</em>' class.
@@ -436,13 +454,22 @@ public interface Mo631modelPackage extends EPackage {
 	int PRODUCER_ROOT__PRODUCER = ROOT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCER_ROOT__NAME = ROOT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Producer Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCER_ROOT_FEATURE_COUNT = ROOT_FEATURE_COUNT + 1;
+	int PRODUCER_ROOT_FEATURE_COUNT = ROOT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Producer Root</em>' class.
@@ -509,13 +536,22 @@ public interface Mo631modelPackage extends EPackage {
 	int CONSUMER_ROOT__CONSUMER = ROOT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUMER_ROOT__NAME = ROOT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Consumer Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSUMER_ROOT_FEATURE_COUNT = ROOT_FEATURE_COUNT + 1;
+	int CONSUMER_ROOT_FEATURE_COUNT = ROOT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Consumer Root</em>' class.
@@ -557,6 +593,17 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProducer_Binding();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.Producer#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see mo631model.mo631model.Producer#getName()
+	 * @see #getProducer()
+	 * @generated
+	 */
+	EAttribute getProducer_Name();
 
 	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Message <em>Message</em>}'.
@@ -676,6 +723,17 @@ public interface Mo631modelPackage extends EPackage {
 	EReference getConsumer_Queue();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.Consumer#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see mo631model.mo631model.Consumer#getName()
+	 * @see #getConsumer()
+	 * @generated
+	 */
+	EAttribute getConsumer_Name();
+
+	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Exchange <em>Exchange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -718,6 +776,17 @@ public interface Mo631modelPackage extends EPackage {
 	EReference getProducerRoot_Producer();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ProducerRoot#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see mo631model.mo631model.ProducerRoot#getName()
+	 * @see #getProducerRoot()
+	 * @generated
+	 */
+	EAttribute getProducerRoot_Name();
+
+	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.ConsumerRoot <em>Consumer Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -737,6 +806,17 @@ public interface Mo631modelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConsumerRoot_Consumer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mo631model.mo631model.ConsumerRoot#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see mo631model.mo631model.ConsumerRoot#getName()
+	 * @see #getConsumerRoot()
+	 * @generated
+	 */
+	EAttribute getConsumerRoot_Name();
 
 	/**
 	 * Returns the meta object for class '{@link mo631model.mo631model.Root <em>Root</em>}'.
@@ -842,6 +922,14 @@ public interface Mo631modelPackage extends EPackage {
 		EReference PRODUCER__BINDING = eINSTANCE.getProducer_Binding();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCER__NAME = eINSTANCE.getProducer_Name();
+
+		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.MessageImpl <em>Message</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -938,6 +1026,14 @@ public interface Mo631modelPackage extends EPackage {
 		EReference CONSUMER__QUEUE = eINSTANCE.getConsumer_Queue();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSUMER__NAME = eINSTANCE.getConsumer_Name();
+
+		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.ExchangeImpl <em>Exchange</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -974,6 +1070,14 @@ public interface Mo631modelPackage extends EPackage {
 		EReference PRODUCER_ROOT__PRODUCER = eINSTANCE.getProducerRoot_Producer();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCER_ROOT__NAME = eINSTANCE.getProducerRoot_Name();
+
+		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.ConsumerRootImpl <em>Consumer Root</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -990,6 +1094,14 @@ public interface Mo631modelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONSUMER_ROOT__CONSUMER = eINSTANCE.getConsumerRoot_Consumer();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSUMER_ROOT__NAME = eINSTANCE.getConsumerRoot_Name();
 
 		/**
 		 * The meta object literal for the '{@link mo631model.mo631model.impl.RootImpl <em>Root</em>}' class.

@@ -8,12 +8,15 @@ import mo631model.mo631model.Consumer;
 import mo631model.mo631model.ConsumerRoot;
 import mo631model.mo631model.Mo631modelPackage;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link mo631model.mo631model.impl.ConsumerRootImpl#getConsumer <em>Consumer</em>}</li>
+ *   <li>{@link mo631model.mo631model.impl.ConsumerRootImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +45,26 @@ public class ConsumerRootImpl extends RootImpl implements ConsumerRoot {
 	 * @ordered
 	 */
 	protected EList<Consumer> consumer;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = "ConsumerApp";
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,6 +105,30 @@ public class ConsumerRootImpl extends RootImpl implements ConsumerRoot {
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Mo631modelPackage.CONSUMER_ROOT__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Mo631modelPackage.CONSUMER_ROOT__CONSUMER:
@@ -99,6 +147,8 @@ public class ConsumerRootImpl extends RootImpl implements ConsumerRoot {
 		switch (featureID) {
 		case Mo631modelPackage.CONSUMER_ROOT__CONSUMER:
 			return getConsumer();
+		case Mo631modelPackage.CONSUMER_ROOT__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +166,9 @@ public class ConsumerRootImpl extends RootImpl implements ConsumerRoot {
 			getConsumer().clear();
 			getConsumer().addAll((Collection<? extends Consumer>) newValue);
 			return;
+		case Mo631modelPackage.CONSUMER_ROOT__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +184,9 @@ public class ConsumerRootImpl extends RootImpl implements ConsumerRoot {
 		case Mo631modelPackage.CONSUMER_ROOT__CONSUMER:
 			getConsumer().clear();
 			return;
+		case Mo631modelPackage.CONSUMER_ROOT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,8 +201,27 @@ public class ConsumerRootImpl extends RootImpl implements ConsumerRoot {
 		switch (featureID) {
 		case Mo631modelPackage.CONSUMER_ROOT__CONSUMER:
 			return consumer != null && !consumer.isEmpty();
+		case Mo631modelPackage.CONSUMER_ROOT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ConsumerRootImpl

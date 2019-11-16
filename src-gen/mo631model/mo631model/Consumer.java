@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link mo631model.mo631model.Consumer#getQueue <em>Queue</em>}</li>
+ *   <li>{@link mo631model.mo631model.Consumer#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see mo631model.mo631model.Mo631modelPackage#getConsumer()
@@ -35,5 +36,27 @@ public interface Consumer extends EObject {
 	 * @generated
 	 */
 	EList<Queue> getQueue();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see mo631model.mo631model.Mo631modelPackage#getConsumer_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link mo631model.mo631model.Consumer#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Consumer

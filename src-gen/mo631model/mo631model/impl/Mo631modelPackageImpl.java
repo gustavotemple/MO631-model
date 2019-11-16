@@ -202,6 +202,16 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getProducer_Name() {
+		return (EAttribute) producerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getMessage() {
 		return messageEClass;
 	}
@@ -312,6 +322,16 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getConsumer_Name() {
+		return (EAttribute) consumerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getExchange() {
 		return exchangeEClass;
 	}
@@ -352,6 +372,16 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	 * @generated
 	 */
 	@Override
+	public EAttribute getProducerRoot_Name() {
+		return (EAttribute) producerRootEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getConsumerRoot() {
 		return consumerRootEClass;
 	}
@@ -364,6 +394,16 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 	@Override
 	public EReference getConsumerRoot_Consumer() {
 		return (EReference) consumerRootEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getConsumerRoot_Name() {
+		return (EAttribute) consumerRootEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -449,6 +489,7 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		producerEClass = createEClass(PRODUCER);
 		createEReference(producerEClass, PRODUCER__MESSAGE);
 		createEReference(producerEClass, PRODUCER__BINDING);
+		createEAttribute(producerEClass, PRODUCER__NAME);
 
 		messageEClass = createEClass(MESSAGE);
 		createEAttribute(messageEClass, MESSAGE__PAYLOAD);
@@ -464,15 +505,18 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 
 		consumerEClass = createEClass(CONSUMER);
 		createEReference(consumerEClass, CONSUMER__QUEUE);
+		createEAttribute(consumerEClass, CONSUMER__NAME);
 
 		exchangeEClass = createEClass(EXCHANGE);
 		createEAttribute(exchangeEClass, EXCHANGE__NAME);
 
 		producerRootEClass = createEClass(PRODUCER_ROOT);
 		createEReference(producerRootEClass, PRODUCER_ROOT__PRODUCER);
+		createEAttribute(producerRootEClass, PRODUCER_ROOT__NAME);
 
 		consumerRootEClass = createEClass(CONSUMER_ROOT);
 		createEReference(consumerRootEClass, CONSUMER_ROOT__CONSUMER);
+		createEAttribute(consumerRootEClass, CONSUMER_ROOT__NAME);
 
 		rootEClass = createEClass(ROOT);
 		createEAttribute(rootEClass, ROOT__HOST);
@@ -522,6 +566,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		initEReference(getProducer_Binding(), this.getBinding(), null, "binding", null, 1, 1, Producer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducer_Name(), ecorePackage.getEString(), "name", null, 1, 1, Producer.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMessage_Payload(), ecorePackage.getEString(), "payload", null, 1, 1, Message.class,
@@ -549,6 +595,8 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		initEReference(getConsumer_Queue(), this.getQueue(), null, "queue", null, 1, -1, Consumer.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getConsumer_Name(), ecorePackage.getEString(), "name", null, 1, 1, Consumer.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exchangeEClass, Exchange.class, "Exchange", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -560,12 +608,18 @@ public class Mo631modelPackageImpl extends EPackageImpl implements Mo631modelPac
 		initEReference(getProducerRoot_Producer(), this.getProducer(), null, "producer", null, 1, -1,
 				ProducerRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducerRoot_Name(), ecorePackage.getEString(), "name", "ProducerApp", 1, 1,
+				ProducerRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(consumerRootEClass, ConsumerRoot.class, "ConsumerRoot", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConsumerRoot_Consumer(), this.getConsumer(), null, "consumer", null, 1, -1,
 				ConsumerRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConsumerRoot_Name(), ecorePackage.getEString(), "name", "ConsumerApp", 1, 1,
+				ConsumerRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(rootEClass, Root.class, "Root", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoot_Host(), ecorePackage.getEString(), "host", "localhost", 1, 1, Root.class, !IS_TRANSIENT,

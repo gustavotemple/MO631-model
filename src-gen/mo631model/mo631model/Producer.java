@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link mo631model.mo631model.Producer#getMessage <em>Message</em>}</li>
  *   <li>{@link mo631model.mo631model.Producer#getBinding <em>Binding</em>}</li>
+ *   <li>{@link mo631model.mo631model.Producer#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see mo631model.mo631model.Mo631modelPackage#getProducer()
@@ -57,5 +58,27 @@ public interface Producer extends EObject {
 	 * @generated
 	 */
 	void setBinding(Binding value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see mo631model.mo631model.Mo631modelPackage#getProducer_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link mo631model.mo631model.Producer#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Producer

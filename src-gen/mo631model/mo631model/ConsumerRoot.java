@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link mo631model.mo631model.ConsumerRoot#getConsumer <em>Consumer</em>}</li>
+ *   <li>{@link mo631model.mo631model.ConsumerRoot#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see mo631model.mo631model.Mo631modelPackage#getConsumerRoot()
@@ -32,5 +33,28 @@ public interface ConsumerRoot extends Root {
 	 * @generated
 	 */
 	EList<Consumer> getConsumer();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"ConsumerApp"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see mo631model.mo631model.Mo631modelPackage#getConsumerRoot_Name()
+	 * @model default="ConsumerApp" required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link mo631model.mo631model.ConsumerRoot#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // ConsumerRoot

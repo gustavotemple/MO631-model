@@ -13,6 +13,7 @@
     <genClasses ecoreClass="mo631model.ecore#//Producer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Producer/message"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Producer/binding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Producer/name"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//Message">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Message/payload"/>
@@ -28,15 +29,18 @@
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//Consumer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//Consumer/queue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Consumer/name"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//Exchange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Exchange/name"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//ProducerRoot">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ProducerRoot/producer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ProducerRoot/name"/>
     </genClasses>
     <genClasses ecoreClass="mo631model.ecore#//ConsumerRoot">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mo631model.ecore#//ConsumerRoot/consumer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//ConsumerRoot/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="mo631model.ecore#//Root">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mo631model.ecore#//Root/host"/>
