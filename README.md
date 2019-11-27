@@ -1,1 +1,1 @@
-# MO631-model
+# MO631 - DSL Ecore
